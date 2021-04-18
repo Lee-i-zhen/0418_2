@@ -25,7 +25,16 @@
             android:name="answer"
             app:argType="string" />
     </fragment>
-
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.example.atry.rule"
+        android:label="fragment_rule"
+        tools:layout="@layout/fragment_rule" />
+    <fragment
+        android:id="@+id/about"
+        android:name="com.example.atry.about"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
 
 
 </navigation>

@@ -3,14 +3,13 @@ package com.example.atry
 import android.content.Context
 import android.os.Bundle
 import android.text.Layout
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.example.atry.databinding.FragmentBackBinding
 import com.example.atry.databinding.FragmentTitleBinding
 
@@ -24,6 +23,7 @@ class Back : Fragment() {
         binding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_back,container,false)
 
+        setHasOptionsMenu(true)
 
         binding.button.setOnClickListener {
 
@@ -31,6 +31,15 @@ class Back : Fragment() {
                 ?.navigate(BackDirections.actionBackToTitleFragment(addtemp(it)))
         }
         return binding.root
+    }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.option_menu, menu)
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.
+        onNavDestinationSelected(item,requireView().findNavController())
+                || super.onOptionsItemSelected(item)
     }
 
     private fun addtemp(view: View): String {
