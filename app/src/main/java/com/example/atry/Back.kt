@@ -12,12 +12,12 @@ import com.example.atry.databinding.FragmentTitleBinding
 
 
 class Back : Fragment() {
-    private lateinit var binding: FragmentBackBinding
+//    private lateinit var binding: FragmentBackBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate<FragmentBackBinding>(inflater,
+        val binding = DataBindingUtil.inflate<FragmentBackBinding>(inflater,
             R.layout.fragment_back,container,false)
 
         binding.button.setOnClickListener {
