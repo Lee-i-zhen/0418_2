@@ -2,6 +2,7 @@ package com.example.atry
 
 import android.content.Context
 import android.os.Bundle
+import android.text.Layout
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -20,24 +21,25 @@ class Back : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<FragmentBackBinding>(inflater,
+        binding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_back,container,false)
+
 
         binding.button.setOnClickListener {
 
-            val answer =
-                view?.findNavController()?.navigate(R.id.action_back_to_titleFragment)
+            view?.findNavController()
+                ?.navigate(BackDirections.actionBackToTitleFragment(addtemp(it)))
         }
         return binding.root
     }
 
-    private fun addtemp(view: View): Double {
+    private fun addtemp(view: View): String {
 
         binding.apply {
             val a = text1.text.toString()?.toDouble()
             val result = (a - 32) * 5 / 9
 //            return "%.2f".format(result)
-            return (a - 32) * 5 / 9
+            return result.toString()
 
         }
 

@@ -12,7 +12,7 @@
         <action
             android:id="@+id/action_back_to_titleFragment"
             app:destination="@id/titleFragment"
-            app:popUpTo="@id/back"
+            app:popUpTo="@id/titleFragment"
             app:popUpToInclusive="true" />
 
     </fragment>
@@ -20,7 +20,11 @@
         android:id="@+id/titleFragment"
         android:label="GameFragment"
         android:name="com.example.atry.TitleFragment"
-        tools:layout="@layout/fragment_title" />
+        tools:layout="@layout/fragment_title" >
+        <argument
+            android:name="answer"
+            app:argType="string" />
+    </fragment>
 
 
 
