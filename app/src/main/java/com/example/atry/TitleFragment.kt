@@ -17,6 +17,10 @@ class TitleFragment : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentTitleBinding>(inflater,
             R.layout.fragment_title,container,false)
+//        val args = .fromBundle(requireArguments())
+//        binding.TVShow.text = args.temp
+        // Inflate the layout for this fragment
+
         return binding.root
 
     }

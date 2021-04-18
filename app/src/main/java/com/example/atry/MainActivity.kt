@@ -14,20 +14,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        binding.button.setOnClickListener {
-            addtemp(it)
-        }
+
     }
-    private fun addtemp(view: View) {
-
-        binding.apply {
-            val a = text1.text.toString()?.toDouble()
-            val result = (a - 32) * 5 / 9
-            textView3.text = "%.2f".format(result)
-
-        }
-
-        val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0) // 隱藏鍵盤
-    }
+//    private fun addtemp(view: View) {
+//
+//        binding.apply {
+//            val a = text1.text.toString()?.toDouble()
+//            val result = (a - 32) * 5 / 9
+//            textView3.text = "%.2f".format(result)
+//
+//        }
+//
+//        val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+//        inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0) // 隱藏鍵盤
+//    }
 }

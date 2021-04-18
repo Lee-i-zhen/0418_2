@@ -13,7 +13,7 @@
             android:id="@+id/action_back_to_titleFragment"
             app:destination="@id/titleFragment"
             app:popUpTo="@id/back"
-            app:popUpToInclusive="false" />
+            app:popUpToInclusive="true" />
 
     </fragment>
     <fragment
