@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/back">
+    <fragment
+        android:id="@+id/back"
+        android:label="backFragment"
+        android:name="com.example.atry.Back"
+        tools:layout="@layout/fragment_back" >
+        <action
+            android:id="@+id/action_back_to_titleFragment"
+            app:destination="@id/titleFragment"
+            app:popUpTo="@id/back"
+            app:popUpToInclusive="false" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/titleFragment"
+        android:label="GameFragment"
+        android:name="com.example.atry.TitleFragment"
+        tools:layout="@layout/fragment_title" />
+
+
+
+</navigation>

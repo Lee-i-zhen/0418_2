@@ -3,66 +3,81 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".MainActivity">
-        <fragment
-            android:id="@+id/titleFragment"
-            android:name="com.example.atry.TitleFragment"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            />
-        <TextView
-            android:id="@+id/sum"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="input"
-            android:textColor="#3F51B5"
-            android:textSize="36sp"
-            tools:layout_editor_absoluteX="165dp"
-            tools:layout_editor_absoluteY="198dp" />
+            android:orientation="vertical"
+            tools:context=".MainActivity">
 
-        <EditText
-            android:id="@+id/text1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name"
-            android:layout_marginTop="150dp"/>
+            <fragment
+                android:id="@+id/titleFragment"
+                android:name="com.example.atry.TitleFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="186dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="150dp"
-            android:text="Button"
-            tools:layout_editor_absoluteX="151dp"
-            tools:layout_editor_absoluteY="480dp" />
+            <fragment
+                android:id="@+id/back"
+                android:name="com.example.atry.Back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="output"
-            android:textColor="#009688"
-            android:textColorHighlight="#FFFFFF"
-            android:textColorLink="#FFFFFF"
-            android:textSize="30sp" />
+            <fragment
+                android:id="@+id/myNavHostFragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:defaultNavHost="true"
+                app:navGraph="@navigation/navigation" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/monkey" />
+            <TextView
+                android:id="@+id/sum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="input"
+                android:textColor="#3F51B5"
+                android:textSize="36sp"
+                tools:layout_editor_absoluteX="165dp"
+                tools:layout_editor_absoluteY="198dp" />
+
+            <EditText
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="150dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="186dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="150dp"
+                android:text="Button"
+                tools:layout_editor_absoluteX="151dp"
+                tools:layout_editor_absoluteY="480dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="output"
+                android:textColor="#009688"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/monkey" />
 
 
-    </LinearLayout>
+        </LinearLayout>
 
 </layout>
